@@ -1,0 +1,62 @@
+{
+  "admin": {
+    "title": "MultiTrack ადმინი"
+  },
+  "dashboard": {
+    "title": "დაფა",
+    "welcomeTitle": "მოგესალმებით MultiTrack ადმინში",
+    "welcomeSubtitle": "გამოიყენეთ გვერდითა მენიუ მომხმარებლებისა და აპლიკაციის სამართავად."
+  },
+  "common": {
+    "save": "შენახვა",
+    "create": "შექმნა",
+    "cancel": "გაუქმება",
+    "delete": "წაშლა",
+    "edit": "რედაქტირება",
+    "actions": "მოქმედებები",
+    "search": "ძიება",
+    "loading": "იტვირთება...",
+    "confirm": "დადასტურება",
+    "yes": "დიახ",
+    "no": "არა",
+    "uploadFailed": "ატვირთვა ვერ მოხერხდა",
+    "deleteFailed": "წაშლა ვერ მოხერხდა",
+    "deleteConfirm": "ნამდვილად გსურთ წაშლა?",
+    "uploadError": "ატვირთვის შეცდომა",
+    "imageUploaded": "სურათი წარმატებით აიტვირთა",
+    "imageTypeNotAllowed": "დაშვებულია მხოლოდ JPEG, PNG, WebP, GIF ან SVG ფორმატები",
+    "imageHeicNotSupported": "HEIC/HEIF ფორმატი არ არის მხარდაჭერილი. გთხოვთ გადაიყვანოთ JPEG ან PNG ფორმატში ატვირთვამდე",
+    "imageTooLarge": "სურათი უნდა იყოს {{maxSize}}MB-ზე ნაკლები",
+    "totalItems": "სულ {{total}} ჩანაწერი"
+  },
+  "categories": {
+    "iconSearchPlaceholder": "აიქონების ძიება..."
+  },
+  "products": {
+    "nameRequired": "სახელი სავალდებულოა",
+    "video": "ვიდეო",
+    "videoUpload": "ვიდეოს ატვირთვა",
+    "videoUploadHint": "MP4, WebM ან MOV. მაქს. 100MB.",
+    "videoRemove": "ვიდეოს წაშლა"
+  },
+  "translations": {
+    "optional": "არასავალდებულო — ცარიელი დატოვეთ ქართული ტექსტის გამოსაყენებლად",
+    "noTranslation": "თარგმანი არ არის",
+    "tabLabel": "{{lang}} თარგმანი"
+  },
+  "users": {
+    "title": "მომხმარებლები",
+    "fullName": "სრული სახელი",
+    "email": "ელ. ფოსტა",
+    "phone": "ტელეფონი",
+    "newsletter": "სიახლეები",
+    "searchPlaceholder": "ძიება სახელით, ელ. ფოსტით ან ტელეფონით...",
+    "allUsers": "ყველა მომხმარებელი",
+    "registered": "რეგისტრირებული",
+    "guest": "სტუმარი",
+    "detail": "მომხმარებლის დეტალები",
+    "notFound": "მომხმარებელი ვერ მოიძებნა",
+    "subscribedToNewsletter": "სიახლეების გამომწერი",
+    "empty": "მომხმარებლები ჯერ არ არის"
+  }
+}

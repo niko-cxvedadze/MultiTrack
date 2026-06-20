@@ -1,0 +1,13 @@
+{
+    "prettier.configPath": ".prettierrc",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        // "source.organizeImports": "explicit",
+        // "source.fixAll": "explicit",
+        // "source.addMissingImports.ts": "explicit"
+  },
+  "[javascript][typescript][json][jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}

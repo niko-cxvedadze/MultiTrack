@@ -1,0 +1,10 @@
+# Only copy .env files between worktrees
+# Other gitignored files (node_modules, .turbo, etc.) are handled by bun i
+
+# Root .env (contains shared credentials and will have ports updated)
+.env
+.env.local
+
+# App-specific env files (if any)
+apps/**/.env
+apps/**/.env.local

@@ -1,0 +1,95 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+package-lock.json
+.vscode
+.turbo
+.next
+.swc
+
+# Generasted files
+openapi.types.d.ts
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# AIStack
+/apps/ai-stack
+/packages/ai-stack-sdk
+/apps/ai-dash
+types.schema.json
+
+# Generated UI
+**/components/assistant-ui/
+
+# AI Stack
+/apps/ai-stack
+
+# database
+/prisma/db.sqlite
+/prisma/db.sqlite-journal
+/data/
+/data/postgres_data
+/data/redis_data
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+**/.next/**
+
+# Zod Types
+**/generated/zod/**
+
+# Dist
+**/dist/**
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# Test results
+**/test-results/**
+**/test-results.xml
+**/storageState.json
+**/playwright-report/**
+
+# sort-imports-ignore
+**/__tests__/singleton.ts
+
+# Python virtual environments from scripts
+**/.venv/**
+
+# Docker-Compose Container Config
+apps/infra/data/
+
+# bun lock
+bun.lock
+
+# ignore MDX files
+*.mdx
+**/*.mdx

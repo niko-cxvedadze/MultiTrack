@@ -1,0 +1,62 @@
+{
+  "admin": {
+    "title": "MultiTrack Admin"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcomeTitle": "Welcome to MultiTrack admin",
+    "welcomeSubtitle": "Use the sidebar to manage users and your application."
+  },
+  "common": {
+    "save": "Save",
+    "create": "Create",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "actions": "Actions",
+    "search": "Search",
+    "loading": "Loading...",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "uploadFailed": "Upload failed",
+    "deleteFailed": "Delete failed",
+    "deleteConfirm": "Are you sure you want to delete this?",
+    "uploadError": "Upload Error",
+    "imageUploaded": "Image uploaded successfully",
+    "imageTypeNotAllowed": "Only JPEG, PNG, WebP, GIF, or SVG files are allowed",
+    "imageHeicNotSupported": "HEIC/HEIF format is not supported. Please convert to JPEG or PNG before uploading",
+    "imageTooLarge": "Image must be smaller than {{maxSize}}MB",
+    "totalItems": "Total {{total}} items"
+  },
+  "categories": {
+    "iconSearchPlaceholder": "Search icons..."
+  },
+  "products": {
+    "nameRequired": "Name is required",
+    "video": "Video",
+    "videoUpload": "Upload Video",
+    "videoUploadHint": "MP4, WebM, or MOV. Max 100MB.",
+    "videoRemove": "Remove Video"
+  },
+  "translations": {
+    "optional": "Optional — leave blank to use Georgian text",
+    "noTranslation": "No translation",
+    "tabLabel": "{{lang}} Translation"
+  },
+  "users": {
+    "title": "Users",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "newsletter": "Newsletter",
+    "searchPlaceholder": "Search by name, email or phone...",
+    "allUsers": "All Users",
+    "registered": "Registered",
+    "guest": "Guest",
+    "detail": "User Detail",
+    "notFound": "User not found",
+    "subscribedToNewsletter": "Newsletter subscriber",
+    "empty": "No users yet"
+  }
+}

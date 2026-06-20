@@ -1,0 +1,55 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "printa-backend",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-03-06",
+	"dev": {
+		"port": 8080
+	},
+	"compatibility_flags": ["nodejs_compat"],
+	"r2_buckets": [
+		{
+			"binding": "R2_BUCKET",
+			"bucket_name": "printa"
+		}
+	],
+	"ratelimits": [
+		{
+			"name": "OTP_RATE_LIMITER",
+			"namespace_id": "1001",
+			"simple": {
+				"limit": 5,
+				"period": 60
+			}
+		},
+		{
+			"name": "ADMIN_LOGIN_RATE_LIMITER",
+			"namespace_id": "1002",
+			"simple": {
+				"limit": 5,
+				"period": 60
+			}
+		}
+	],
+	"queues": {
+		"producers": [
+			{
+				"binding": "EVENTS_QUEUE",
+				"queue": "printa-events"
+			}
+		],
+		"consumers": [
+			{
+				"queue": "printa-events",
+				"max_batch_size": 10,
+				"max_retries": 3
+			}
+		]
+	},
+	"placement": {
+		"mode": "smart"
+	},
+	"observability": {
+		"enabled": true
+	}
+}

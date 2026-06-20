@@ -1,0 +1,30 @@
+{
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": true,
+  "importOrder": [
+    "^react$",
+    "^next(-?)(.*)",
+    "<THIRD_PARTY_MODULES>",
+    "^@/server/(.*)$",
+    "^@/components/(.*)$",
+    "^@/contexts/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/utils/(.*)$",
+    "^@/",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["prettier-plugin-tailwindcss", "@trivago/prettier-plugin-sort-imports"],
+  "overrides": [
+    {
+      "files": ["packages/analytics/__tests__/*", "packages/backend/__tests__/*"],
+      "options": {
+        "importOrder": []
+      }
+    }
+  ]
+}

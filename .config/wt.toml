@@ -1,0 +1,34 @@
+# Worktrunk configuration for alldrive.ge
+# Each worktree gets unique ports for backend/frontend
+
+[post-create]
+# 1. Copy .env files (with credentials) from source worktree
+copy-env = "wt step copy-ignored"
+
+# 2. Update ports in the root .env file
+# Uses hash_port filter to generate stable port from branch name
+update-ports = """
+BACKEND_PORT={{ branch | hash_port }}
+FRONTEND_PORT=$(( BACKEND_PORT + 1000 ))
+
+if [ -f .env ]; then
+  # Update existing .env with new ports
+  sed -i '' "s/^PORT=.*/PORT=$BACKEND_PORT/" .env 2>/dev/null || sed -i "s/^PORT=.*/PORT=$BACKEND_PORT/" .env
+  sed -i '' "s|^CORS_ORIGIN=.*|CORS_ORIGIN=http://localhost:$FRONTEND_PORT|" .env 2>/dev/null || sed -i "s|^CORS_ORIGIN=.*|CORS_ORIGIN=http://localhost:$FRONTEND_PORT|" .env
+  sed -i '' "s|^VITE_API_URL=.*|VITE_API_URL=http://localhost:$BACKEND_PORT|" .env 2>/dev/null || sed -i "s|^VITE_API_URL=.*|VITE_API_URL=http://localhost:$BACKEND_PORT|" .env
+  sed -i '' "s/^VITE_PORT=.*/VITE_PORT=$FRONTEND_PORT/" .env 2>/dev/null || sed -i "s/^VITE_PORT=.*/VITE_PORT=$FRONTEND_PORT/" .env
+
+  # Add variables if they don't exist
+  grep -q '^PORT=' .env || echo "PORT=$BACKEND_PORT" >> .env
+  grep -q '^VITE_API_URL=' .env || echo "VITE_API_URL=http://localhost:$BACKEND_PORT" >> .env
+  grep -q '^CORS_ORIGIN=' .env || echo "CORS_ORIGIN=http://localhost:$FRONTEND_PORT" >> .env
+  grep -q '^VITE_PORT=' .env || echo "VITE_PORT=$FRONTEND_PORT" >> .env
+
+  echo "✓ Ports configured: Backend=$BACKEND_PORT, Frontend=$FRONTEND_PORT"
+else
+  echo "Warning: No .env file found. Please copy credentials from main worktree."
+fi
+"""
+
+# 3. Install dependencies
+install-deps = "bun i"

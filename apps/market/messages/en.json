@@ -1,0 +1,385 @@
+{
+  "header": {
+    "announcement": "Welcome to MultiTrack",
+    "login": "Login",
+    "logout": "Logout",
+    "myAccount": "My Account",
+    "profile": "Profile",
+    "notificationsLabel": "Notifications",
+    "settings": "Settings",
+    "pageTitle": {
+      "home": "MultiTrack",
+      "settings": "Settings",
+      "notifications": "Notifications",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "faq": "FAQ",
+      "profile": "My Account"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "loginDescription": "Sign in to your account",
+    "registerDescription": "Create a new account",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "firstNamePlaceholder": "First name",
+    "lastNamePlaceholder": "Last name",
+    "phoneNumber": "Phone number",
+    "email": "Email",
+    "sendCode": "Send code",
+    "verify": "Verify",
+    "verificationCode": "Verification code",
+    "loginWithPhone": "Phone",
+    "loginWithEmail": "Email",
+    "codeSent": "A verification code has been sent to your phone.",
+    "emailCodeSent": "A verification code has been sent to your email.",
+    "resendCode": "Resend code",
+    "resendCodeIn": "Resend code ({seconds}s)",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "sendCodeFailed": "Failed to send verification code",
+    "verifyCodeFailed": "Verification failed",
+    "registerFailed": "Registration failed",
+    "loginSuccess": "Successfully logged in!",
+    "registerSuccess": "Account created successfully!",
+    "phoneAlreadyRegistered": "This phone number is already registered. Try logging in instead.",
+    "emailAlreadyRegistered": "This email is already registered. Try logging in instead.",
+    "newsletterPrompt": "Would you like to receive SMS & Email notifications about tailored news and offers?",
+    "newsletterLearnMore": "Learn more",
+    "termsAgreement": "I have read and agree to the",
+    "termsLink": "Terms & Conditions",
+    "termsAnd": "and",
+    "privacyLink": "Privacy Policy",
+    "termsRequired": "You must accept the Terms & Conditions to register",
+    "yes": "Yes",
+    "no": "No",
+    "noAccountPhone": "No account found with this phone number. Please register first.",
+    "noAccountEmail": "No account found with this email. Please register first.",
+    "invalidCode": "Invalid verification code. Please try again.",
+    "checkFailed": "Unable to check account status. Please try again."
+  },
+  "home": {
+    "title": "MultiTrack",
+    "subtitle": "The starting point for your next great app.",
+    "cta": "Get started"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for doesn't exist or has been removed.",
+    "backHome": "Back to Home"
+  },
+  "profile": {
+    "myAccount": "My Account",
+    "overview": "Overview",
+    "notificationsLabel": "Notifications",
+    "settings": "Settings",
+    "logout": "Logout",
+    "loginRequired": "Please log in to access your account",
+    "settingsTitle": "Settings",
+    "email": "Email",
+    "fullName": "Full name",
+    "phoneNumber": "Phone number",
+    "change": "Change",
+    "save": "Save",
+    "cancel": "Cancel",
+    "notSet": "Not set",
+    "fullNameUpdated": "Full name updated",
+    "fullNameUpdateFailed": "Failed to update full name",
+    "notifications": {
+      "title": "Notification Preferences",
+      "description": "Manage your notification preferences for news and offers. Toggle SMS and email notifications on or off at any time.",
+      "smsEmailLabel": "You will not receive SMS & Email notifications.",
+      "learnMore": "Learn more",
+      "subscribed": "Notifications enabled",
+      "unsubscribed": "Notifications disabled",
+      "updateFailed": "Failed to update notification preferences"
+    }
+  },
+  "footer": {
+    "links": {
+      "about": "About",
+      "faq": "FAQ",
+      "termsAndConditions": "Terms & Conditions",
+      "privacyPolicy": "Privacy",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "youtube": "Youtube",
+      "linkedin": "LinkedIn",
+      "tiktok": "TikTok"
+    },
+    "contact": {
+      "emailPlaceholder": "Your email",
+      "subscribeNews": "Be the first to know - subscribe now"
+    },
+    "newsletter": {
+      "success": "Successfully subscribed to newsletter",
+      "error": "Failed to subscribe. Please try again."
+    }
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "lastUpdated": "Last updated: March 28, 2026",
+    "intro": "These Terms and Conditions constitute a binding bilateral agreement between the User and შპს \"მაცდური ვაშლი\" (LLC \"Machduri Vashli\"), operating under the brand name \"Printa\" through the website multitrack.app. By registering on the website or placing an order, the User confirms acceptance of these Terms, the Privacy Policy, and the Return & Exchange Policy. Please read them carefully before using our platform.",
+    "sections": {
+      "general": {
+        "title": "General Provisions",
+        "content": "These Terms and Conditions (hereinafter \"Terms\") govern the use of the MultiTrack website (multitrack.app) and all related services provided by შპს \"მაცდური ვაშლი\" (LLC \"Machduri Vashli\"), a company established under the laws of Georgia, operating under the brand name \"Printa\" (hereinafter \"MultiTrack\").\n\nBy accessing the website, creating an account, or placing an order, you confirm that you have read, understood, and agree to be bound by these Terms, our Privacy Policy, and our Return & Exchange Policy. If you do not agree with any part of these Terms, you must not use our platform.\n\nMultiTrack reserves the right to modify these Terms at any time by publishing the updated version on the website. Continued use of the platform after any changes constitutes acceptance of the revised Terms. Users are encouraged to review these Terms periodically."
+      },
+      "registration": {
+        "title": "Registration & User Obligations",
+        "content": "To make purchases on MultiTrack, users must complete a registration form providing their name, phone number, email address, and delivery address. Registration can be completed before or during the purchase process.\n\nBy registering, the User confirms that: they provide accurate and complete information; they are at least 18 years old and legally capable of entering into binding agreements; they will not use another person's identification or credentials; they will not post false, misleading, or defamatory information; they will not impersonate any person or entity; they will not violate applicable laws or third-party rights; they will not use automated tools or scripts to extract data from the platform; they will respect intellectual property rights; they will not attempt unauthorized access to other accounts or platform systems; and they will not take any action that could compromise platform security or functionality.\n\nMultiTrack is not responsible for any consequences arising from the User providing inaccurate or incomplete information."
+      },
+      "purchaseProcess": {
+        "title": "Purchase Process",
+        "content": "Users select products and add them to a virtual shopping cart. To complete a purchase, the User must provide a valid email address, full name, phone number, and delivery address.\n\nMultiTrack verifies the provided information before processing payment to ensure uninterrupted product delivery. If an incorrect delivery address is provided, the User bears full responsibility for any resulting delivery issues.\n\nMultiTrack reserves the right to refuse or cancel any order due to suspected fraud, incomplete or inaccurate data, product unavailability, or pricing errors. The company may also set minimum or maximum order value limits at its sole discretion without requiring additional user consent.\n\nUpon successful payment, ownership of the purchased products transfers to the User. Users can view and track their orders through their personal account page."
+      },
+      "orderCancellation": {
+        "title": "Order Cancellation",
+        "content": "The User may cancel an order only while it is in \"Pending\" status. Once the order has been confirmed or moved to processing, cancellation is no longer available.\n\nFor print-on-demand products, cancellation may not be possible once production has begun, even if the order status is still \"Pending.\" MultiTrack will make reasonable efforts to accommodate cancellation requests but cannot guarantee them once manufacturing is underway.\n\nTo cancel an eligible order, the User can navigate to My Account → Orders and use the cancellation option. No cancellation fees apply to orders cancelled while in \"Pending\" status."
+      },
+      "pricing": {
+        "title": "Pricing & Payment",
+        "content": "All prices on MultiTrack are displayed in Georgian Lari (GEL) and include applicable taxes unless otherwise stated. MultiTrack reserves the right to change product prices at any time without prior notice. The price applicable to your order is the price displayed at the time of purchase.\n\nOnly non-cash (electronic) payment is accepted. Upon checkout, the User is redirected to a secure payment provider's page to enter their card details. MultiTrack has no access to the payment page or banking information provided by the User.\n\nSuccessful payment confirmation is displayed on screen and sent via email or SMS. In case of pricing errors, MultiTrack will notify the User and offer the option to proceed at the correct price or cancel the order."
+      },
+      "delivery": {
+        "title": "Shipping & Delivery",
+        "content": "MultiTrack offers delivery across Georgia through third-party courier services. By placing an order, the User agrees that their personal information (name, address, phone number) will be shared with the courier company for the purpose of fulfilling the delivery.\n\nDelivery within Tbilisi is typically completed within 1-3 business days. Regional deliveries may take 3-5 business days, and deliveries to mountainous areas may take up to 7-10 business days. These are estimated timeframes and may vary depending on product availability and external circumstances.\n\nDelivery fees apply to orders below the free shipping threshold displayed on the website. Orders meeting or exceeding the threshold qualify for free delivery nationwide.\n\nMultiTrack's responsibility for the product ends upon handover to the courier service. The courier company assumes responsibility for any loss or damage during transit. Claims related to delivery must be directed to the courier service."
+      },
+      "productAccuracy": {
+        "title": "Product Descriptions & Accuracy",
+        "content": "MultiTrack strives to display product images, colors, and descriptions as accurately as possible. However, due to the nature of 3D printing technology, variations in screen settings, and photographic limitations, actual products may differ slightly from their online representations.\n\nMinor variations in color, texture, dimensions (within a tolerance of ±1-2mm), and surface finish are normal characteristics of 3D printed products and do not constitute grounds for a return or complaint.\n\nAll product specifications, including dimensions and weight, are approximate and provided for informational purposes. MultiTrack does not guarantee exact measurements for 3D printed items."
+      },
+      "printOnDemand": {
+        "title": "Print-on-Demand Products",
+        "content": "Certain products on MultiTrack are manufactured on demand using 3D printing technology. These items are produced only after an order is placed and are not held in stock.\n\nPrint-on-demand products may require additional production time beyond standard delivery estimates. The estimated delivery timeframe for such products will be indicated on the product page or during checkout where applicable.\n\nOnce production of a print-on-demand item has begun, the order cannot be cancelled. The User acknowledges and accepts this condition by placing an order for a print-on-demand product."
+      },
+      "returns": {
+        "title": "Returns & Refunds",
+        "content": "MultiTrack accepts returns and refunds only for products that arrive defective or damaged. To request a return, the User must contact our support team within 48 hours of delivery, providing photos or other evidence of the defect or damage.\n\nImportant: Visible printing lines, layer marks, and minor surface texture variations are inherent characteristics of 3D printing technology and are not considered defects. These are a natural result of the manufacturing process and do not qualify for a return or refund.\n\nIf the return is approved, MultiTrack will cover the return shipping costs and process the refund to the original payment method within 10 business days of receiving the returned item.\n\nProducts that have been used, modified, or are missing original packaging are not eligible for return, even if a defect is claimed. Custom-made or personalized items follow the same policy — returns are accepted only for manufacturing defects or shipping damage."
+      },
+      "accountManagement": {
+        "title": "Account Management",
+        "content": "MultiTrack reserves the right to suspend or close a User's account at its sole discretion if the User violates these Terms, provides false information, or engages in fraudulent or abusive behavior. The User will be notified of account suspension via email.\n\nUsers may delete their accounts at any time through the account settings page or by contacting customer support. Upon account deletion, the User's personal data will be handled in accordance with our Privacy Policy.\n\nThe User is solely responsible for all activity conducted through their account and must immediately notify MultiTrack of any unauthorized access or security breach."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "MultiTrack shall not be held liable for: unauthorized access to User data caused by the User's failure to protect their credentials; damages resulting from third-party actions; temporary unavailability of the platform due to maintenance or technical issues; software bugs, viruses, or other harmful components beyond our reasonable control.\n\nThe company assumes no responsibility for damages arising from User negligence or when third parties obtain User authentication information through no fault of MultiTrack.\n\nIn the event that liability is established by a court of competent jurisdiction, MultiTrack's total liability shall not exceed the value of the product(s) giving rise to the claim. MultiTrack is not liable for disruptions caused by third-party service providers, including internet and mobile network operators.\n\nThis limitation of liability applies to the fullest extent permitted by the laws of Georgia."
+      },
+      "websiteRestrictions": {
+        "title": "Website Usage Restrictions",
+        "content": "Information on the MultiTrack website may be updated or changed without prior notice. Users agree not to use the platform for any illegal or unauthorized purposes, including but not limited to: attempting to gain unauthorized access to platform systems or other users' accounts; interfering with or disrupting the platform's functionality; using the website to distribute malware, spam, or harmful content; scraping, mining, or extracting data without authorization.\n\nMultiTrack reserves the right to restrict access to the platform for any User who violates these restrictions."
+      },
+      "marketing": {
+        "title": "Marketing Communications",
+        "content": "With the User's explicit consent, MultiTrack may use personal information (name, email, phone number) for direct marketing purposes, including sending promotional offers, discounts, and news via SMS and email.\n\nThe User can opt out of marketing communications at any time through their account notification settings. Upon receiving an opt-out request, MultiTrack will cease direct marketing within 5 business days.\n\nOpting out of marketing communications does not prevent MultiTrack from sending transactional messages related to orders, account updates, and important service notifications.\n\nMultiTrack records the timing and facts of consent and withdrawal for a period of one year following any withdrawal of consent, as required by applicable law."
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "content": "All content on the MultiTrack website, including but not limited to text, graphics, logos, images, product designs, 3D models, animations, and software, is the exclusive property of MultiTrack or its licensors and is protected by Georgian and international intellectual property laws.\n\nThe MultiTrack trademark and brand identity are the property of the company. Unauthorized use of the trademark, graphics, or any content in a manner that diminishes the brand's reputation is strictly prohibited.\n\nPurchasing a product does not transfer any intellectual property or copyright to the User. Users may not reproduce, distribute, modify, reverse-engineer, or create derivative works from any content or products without prior written consent from MultiTrack.\n\nViolation of intellectual property rights will result in legal action, and the violating party shall bear liability for all material and immaterial damages, including attorney and court costs. If you believe any content on our platform infringes your copyright, please contact us at support@multitrack.app."
+      },
+      "forceMajeure": {
+        "title": "Force Majeure",
+        "content": "MultiTrack shall not be held liable for any delay or failure to perform its obligations under these Terms if such delay or failure results from circumstances beyond its reasonable control, including but not limited to: natural disasters, pandemics, government actions or restrictions, supply chain disruptions, power outages, internet or telecommunications failures, strikes, or acts of war.\n\nIn the event of a force majeure situation, MultiTrack will make reasonable efforts to notify affected Users and resume normal operations as soon as practicable. Delivery timelines and order processing may be extended for the duration of the force majeure event without liability to MultiTrack."
+      },
+      "governing": {
+        "title": "Governing Law & Dispute Resolution",
+        "content": "These Terms and Conditions are governed by and construed in accordance with the laws of Georgia. In the event of any dispute arising from or related to these Terms, the parties shall first attempt to resolve the matter through good-faith negotiation.\n\nIf a dispute cannot be resolved through negotiation, it shall be submitted to the exclusive jurisdiction of the courts of Tbilisi, Georgia. The invalidity of any individual provision of these Terms shall not affect the validity of the remaining provisions."
+      },
+      "changes": {
+        "title": "Changes to Terms",
+        "content": "MultiTrack reserves the right to unilaterally amend these Terms and Conditions at any time by publishing the updated version on the website. No additional User consent is required for such amendments to take effect.\n\nContinued use of the platform after the publication of amended Terms constitutes the User's acceptance of the changes. Users are encouraged to review these Terms periodically to stay informed of any updates."
+      },
+      "thirdPartyLinks": {
+        "title": "Third-Party Links",
+        "content": "The MultiTrack website and its social media pages (Facebook, Instagram, TikTok) may contain links to third-party websites, services, or resources that are not owned or controlled by MultiTrack. We provide these links for your convenience and informational purposes only.\n\nMultiTrack has no control over and assumes no responsibility for the content, privacy policies, practices, or availability of any third-party websites or services. Accessing third-party websites is at your own risk, and you should review the terms and privacy policies of any third-party website you visit.\n\nThe inclusion of any link does not imply endorsement, affiliation, or sponsorship by MultiTrack of the linked website or its content."
+      },
+      "contractDuration": {
+        "title": "Contract Duration & Termination",
+        "content": "The agreement between the User and MultiTrack takes effect upon registration and remains active for the duration of the User's account existence. Each order placed creates a separate purchase agreement governed by these Terms.\n\nEither party may terminate this agreement at any time, provided that all outstanding obligations (including pending orders and payments) are fulfilled. The User may terminate by deleting their account through account settings or by contacting customer support.\n\nMultiTrack may unilaterally terminate the agreement in accordance with these Terms or applicable Georgian law, including but not limited to cases of Terms violations, fraudulent activity, or abusive behavior. Upon termination, provisions relating to intellectual property, limitation of liability, and governing law shall survive."
+      },
+      "contact": {
+        "title": "Contact Information",
+        "content": "If you have any questions about these Terms and Conditions, please contact us at support@multitrack.app. Our customer service team is available Monday through Friday, 10:00 AM to 6:00 PM (Tbilisi time)."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 28, 2026",
+    "intro": "This Privacy Policy describes how your personal information is collected, used, stored, and protected when you use the MultiTrack website (multitrack.app) and its related services, operated by შპს \"მაცდური ვაშლი\" (LLC \"Machduri Vashli\"). By using our website and services, you agree to the collection and processing of your data as described in this policy. We encourage you to read this document carefully and review it periodically, as it may be updated from time to time.",
+    "sections": {
+      "consent": {
+        "title": "Consent",
+        "content": "By accessing the MultiTrack website, creating an account, or placing an order, you consent to the collection, processing, and storage of your personal information as described in this Privacy Policy. This consent is necessary for us to provide our services to you.\n\nYou may withdraw your consent at any time by contacting us at support@multitrack.app or by deleting your account through your account settings. Withdrawal of consent does not affect the lawfulness of processing carried out before the withdrawal."
+      },
+      "legalBasis": {
+        "title": "Legal Basis for Data Processing",
+        "content": "We process your personal data on the following legal grounds, in accordance with the Law of Georgia on Personal Data Protection:\n\n• Contractual necessity — processing is required to fulfill purchase agreements and deliver products you have ordered.\n\n• Your explicit consent — for activities such as direct marketing communications, newsletter subscriptions, and analytics tracking.\n\n• Legal obligations — when we are required to retain or disclose data to comply with tax, accounting, or other regulatory requirements under Georgian law.\n\n• Legitimate interests — to improve our services, prevent fraud, ensure platform security, and analyze website usage patterns, provided these interests do not override your fundamental rights."
+      },
+      "dataCollection": {
+        "title": "Information We Collect",
+        "content": "We collect information from the following sources:\n\n• Registration and account creation — your first name, last name, phone number, and email address.\n\n• Order placement — your shipping address, contact details, and order history. Payment card details are entered on a secure third-party payment provider's page; MultiTrack does not receive or store your card information.\n\n• Customer support — messages and information you share when contacting us through our live chat (Crisp) or email.\n\n• Automatic collection — when you browse our website, we automatically collect technical data through cookies and analytics tools, including your IP address, browser type, device information, operating system, pages visited, time spent on pages, click patterns, scroll behavior, and referring website."
+      },
+      "dataTypes": {
+        "title": "Types of Data Processed",
+        "content": "The categories of personal data we process include:\n\n• Identity data — first name, last name.\n\n• Contact data — phone number, email address, shipping address.\n\n• Transaction data — order details, purchase history, order status.\n\n• Technical data — IP address, browser type and version, device type, operating system, screen resolution.\n\n• Usage data — pages visited, products viewed, search queries, time spent on pages, click and scroll patterns, session recordings.\n\n• Communication data — chat messages, email correspondence, support inquiries.\n\n• Preference data — language preference, newsletter subscription status, notification settings.\n\nWe do not collect sensitive personal data such as racial or ethnic origin, political opinions, religious beliefs, health data, or biometric data."
+      },
+      "dataUsage": {
+        "title": "How We Use Your Information",
+        "content": "We use your personal information for the following purposes:\n\n• Processing and fulfilling your orders, including product manufacturing, packaging, and coordinating delivery with courier services.\n\n• Communicating with you about your orders, including status updates, shipping notifications, and delivery confirmations via email and SMS.\n\n• Providing customer support through our live chat and email.\n\n• Sending promotional offers, discounts, and news via SMS and email (only with your explicit consent).\n\n• Analyzing website traffic and user behavior to improve our products, services, and user experience.\n\n• Detecting and preventing fraudulent activity, unauthorized access, and other security threats.\n\n• Complying with legal and regulatory obligations under Georgian law.\n\n• Resolving disputes and enforcing our Terms and Conditions.\n\nWe do not sell, rent, or trade your personal information to third parties for their marketing purposes."
+      },
+      "cookies": {
+        "title": "Cookies & Tracking Technologies",
+        "content": "MultiTrack uses cookies, log files, and similar tracking technologies to analyze trends, administer the website, monitor user interactions, and gather aggregate information. The data collected includes your IP address, device type, browser, visit duration, referring platform, and product viewing activity.\n\nWe use the following third-party analytics and tracking services:\n\n• Google Analytics 4 (GA4) — provided by Google LLC, to analyze website traffic, user behavior, and platform performance. GA4 collects your IP address, device information, browser type, pages visited, and interaction data. When you are logged in, your user ID and profile information may be associated with analytics data for a more personalized experience. Data processed by Google is subject to Google's privacy policy.\n\n• Microsoft Clarity — provided by Microsoft Corporation, to understand how users interact with our website through session recordings and heatmaps. Clarity collects click behavior, scroll depth, mouse movements, and page navigation patterns. When you are logged in, your user ID may be linked to session data. Data processed by Microsoft is subject to Microsoft's privacy policy.\n\n• Crisp Chat — provided by Crisp IM SAS, to offer live customer support. When you use the chat widget, your messages and contact information (name, email, phone) are processed by Crisp for the purpose of providing support. Data processed by Crisp is subject to Crisp's privacy policy.\n\nBy using the MultiTrack website, you consent to the use of these analytics and tracking tools. You can manage your cookie preferences through your browser settings. Disabling certain cookies may affect the functionality of our website."
+      },
+      "thirdParties": {
+        "title": "Who We Share Your Data With",
+        "content": "We share your personal data with the following categories of recipients, strictly for the purposes described in this policy:\n\n• Courier services — your name, shipping address, and phone number are shared with our delivery partners to fulfill your orders.\n\n• Payment providers — you are redirected to a secure third-party payment gateway to process transactions. MultiTrack does not have access to your payment card details.\n\n• Analytics providers — Google LLC (Google Analytics 4) and Microsoft Corporation (Microsoft Clarity) receive anonymized and pseudonymized usage data to help us analyze and improve our platform.\n\n• Customer support — Crisp IM SAS processes your chat messages and contact details to provide live support.\n\n• Legal authorities — we may disclose your information to competent state authorities when required by law, court order, or to prevent illegal activities.\n\nAll third-party service providers are contractually obligated to protect your data and use it only for the specific purposes we authorize. We do not share your personal data with any parties beyond those listed above without your explicit consent."
+      },
+      "dataSecurity": {
+        "title": "Data Security",
+        "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:\n\n• Encryption of data in transit using HTTPS/TLS protocols.\n\n• Secure storage of personal information with access controls.\n\n• Regular security assessments and vulnerability monitoring.\n\n• Access to your personal account is protected by authentication credentials. You are responsible for keeping your login information confidential and not sharing it with third parties.\n\nWhile we take all reasonable precautions to safeguard your data, no method of transmission over the internet is completely secure. MultiTrack cannot guarantee absolute security and does not accept liability for unauthorized access resulting from actions by third parties who illegally access our systems."
+      },
+      "userRights": {
+        "title": "Your Rights",
+        "content": "Under applicable data protection legislation, you have the following rights regarding your personal data:\n\n• Right to access — you may request information about what data we process, the purpose of processing, the legal basis, how data was collected, to whom it has been disclosed, and how long it will be retained. We will respond within 10 business days, which may be extended by an additional 10 business days in exceptional circumstances.\n\n• Right to correction — you may request correction of inaccurate or incomplete personal data. We will process your request within 10 business days.\n\n• Right to deletion — you may request deletion or destruction of your personal data. We will process your request within 10 business days, unless retention is required by law.\n\n• Right to restriction — you may request that we restrict processing of your data in certain circumstances.\n\n• Right to data portability — you may request a copy of your personal data in a structured, commonly used, and machine-readable format.\n\n• Right to withdraw consent — you may withdraw your consent for data processing at any time by contacting us at support@multitrack.app. We will cease the relevant processing within 10 business days of receiving your request.\n\nTo exercise any of these rights, please contact us at support@multitrack.app. You also have the right to lodge a complaint with the relevant data protection supervisory authority."
+      },
+      "userObligations": {
+        "title": "User Obligations",
+        "content": "When providing personal information to MultiTrack, you are obligated to:\n\n• Provide complete and accurate information during registration and order placement.\n\n• Promptly update your personal information when any changes occur.\n\n• Keep your account credentials confidential and not share them with third parties.\n\nMultiTrack is not responsible for any consequences arising from inaccurate, incomplete, or outdated information provided by the User."
+      },
+      "childrenPrivacy": {
+        "title": "Children's Privacy",
+        "content": "The MultiTrack website and services are intended for users who are at least 18 years of age. MultiTrack does not knowingly collect personal information from minors. We cannot independently verify the age of every user. If we become aware that personal data has been collected from a minor without appropriate parental consent, we will take steps to delete that information.\n\nIf you are a parent or guardian and believe your child has provided personal information to MultiTrack, please contact us at support@multitrack.app so we can take appropriate action."
+      },
+      "dataRetention": {
+        "title": "Data Retention",
+        "content": "We retain your personal information for the following periods:\n\n• Account data — for the duration of your account's existence. Since our platform enables repeat purchases, your data is retained until you request its deletion or close your account.\n\n• Order and transaction data — for a minimum of 3 (three) years after the order date, as required for tax, accounting, and legal compliance purposes under Georgian law.\n\n• Communication records — chat and email correspondence are retained for up to 3 (three) years for quality assurance and dispute resolution purposes.\n\n• Analytics data — aggregated and anonymized analytics data may be retained indefinitely for statistical analysis.\n\nYou may request deletion of your account and associated personal data at any time by contacting support@multitrack.app or through your account settings. Certain data may be retained after deletion where required by law."
+      },
+      "internationalTransfers": {
+        "title": "International Data Transfers",
+        "content": "Your personal information may be transferred to and processed in countries outside of Georgia where our third-party service providers operate (including the United States and European Union countries for services such as Google Analytics, Microsoft Clarity, and Crisp Chat).\n\nWe ensure that appropriate safeguards are in place to protect your information during such transfers, in accordance with this Privacy Policy and applicable data protection laws. By using our services, you acknowledge and consent to such transfers."
+      },
+      "directMarketing": {
+        "title": "Direct Marketing",
+        "content": "With your explicit consent (given through an active opt-in action during registration), MultiTrack may use your name, email address, and phone number to send direct marketing communications, including promotional offers, discounts, and news via SMS and email.\n\nYou have the right to withdraw your direct marketing consent at any time through your account notification settings or by contacting us at support@multitrack.app. Upon receiving your withdrawal request, MultiTrack will cease direct marketing to you within 5 (five) business days.\n\nFollowing cessation, you will not receive direct marketing messages from MultiTrack for a period of 1 (one) year. MultiTrack records the timing and facts of consent and withdrawal for the duration of direct marketing activities plus one year after cessation, as required by applicable law.\n\nWithdrawal of direct marketing consent does not prevent MultiTrack from sending transactional notifications related to your orders, account updates, and important service announcements."
+      },
+      "thirdPartyLinks": {
+        "title": "Third-Party Websites",
+        "content": "The MultiTrack website and its social media pages (Facebook, Instagram, TikTok) may contain links to third-party websites that operate under their own privacy policies. MultiTrack has no control over and assumes no responsibility for the content, privacy practices, or data handling of external websites.\n\nWe recommend that you review the privacy policy of any third-party website before providing your personal information. Following a link to an external website is at your own risk."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "content": "MultiTrack reserves the right to update this Privacy Policy at any time. Changes will be published on this page with an updated \"Last updated\" date. For material changes, we may additionally notify you via email or a prominent notice on our website.\n\nContinued use of the platform after the publication of changes constitutes acceptance of the updated Privacy Policy. We encourage you to review this policy periodically to stay informed about how we protect your data."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your personal data, please contact us:\n\nEmail: support@multitrack.app\n\nOur data protection team will respond to your inquiry within 10 business days."
+      }
+    }
+  },
+  "cookieConsent": {
+    "title": "Cookies",
+    "message": "We use cookies to improve your experience.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline",
+    "dialogTitle": "Accept cookies to continue",
+    "dialogMessage": "To add items to your cart and use all features, please accept our cookie policy."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about our products, ordering, shipping, and more.",
+    "categories": {
+      "ordering": "Ordering & Payment",
+      "shipping": "Shipping & Delivery",
+      "products": "Products & 3D Printing",
+      "returns": "Returns & Refunds",
+      "account": "Account"
+    },
+    "items": {
+      "howToOrder": {
+        "question": "How do I place an order?",
+        "answer": "Browse our catalog, add the products you like to your cart, and proceed to checkout. You will need to create an account or log in to complete your order. Select or add a shipping address, confirm your order, and pay on delivery."
+      },
+      "paymentMethods": {
+        "question": "What payment methods do you accept?",
+        "answer": "Currently we accept cash on delivery. You pay when the courier delivers your order — no prepayment required."
+      },
+      "canCancelOrder": {
+        "question": "Can I cancel my order?",
+        "answer": "You can cancel your order while it is still in 'Pending' status. Once the order is confirmed or moves to processing, cancellation is no longer available. Go to My Account → Orders to check the status and cancel if eligible."
+      },
+      "orderTracking": {
+        "question": "How can I track my order?",
+        "answer": "After placing your order, you can track its status in My Account → Orders. You will also receive email notifications when your order status changes."
+      },
+      "shippingTime": {
+        "question": "How long does delivery take?",
+        "answer": "Standard shipping within Georgia takes 2–5 business days. Delivery times may vary depending on your city."
+      },
+      "shippingCost": {
+        "question": "How much does shipping cost?",
+        "answer": "For Tbilisi: shipping costs 6 GEL, free on orders over 50 GEL. For other cities: shipping costs 10 GEL, free on orders over 100 GEL."
+      },
+      "deliverOutsideTbilisi": {
+        "question": "Do you deliver outside Tbilisi?",
+        "answer": "Yes, we deliver to 20 cities across Georgia including Batumi, Kutaisi, Rustavi, Gori, Zugdidi, and more. You can see the exact shipping cost at checkout after selecting your city."
+      },
+      "pickupAvailable": {
+        "question": "Is self-pickup available?",
+        "answer": "Yes, self-pickup is available at our location in Tbilisi, Pharnavaz Mepe 26a. You can collect your order free of charge after receiving a confirmation notification."
+      },
+      "whatIs3dPrinting": {
+        "question": "What is 3D printing?",
+        "answer": "3D printing is a manufacturing process where objects are created layer by layer from digital designs. This technology allows us to produce unique, high-quality items with intricate details that traditional manufacturing cannot achieve."
+      },
+      "productMaterials": {
+        "question": "What materials are your products made from?",
+        "answer": "Our products are made from various materials depending on the item: PLA (eco-friendly bioplastic), PETG (extra durable), TPU (flexible), and Resin (high detail). Material details are listed on each product page."
+      },
+      "customOrders": {
+        "question": "Can I order a custom 3D printed item?",
+        "answer": "At this time, we only sell items from our existing catalog. Custom orders and made-to-order designs are not available yet, but we are working on adding this feature in the future."
+      },
+      "productQuality": {
+        "question": "How durable are 3D printed products?",
+        "answer": "Our 3D printed products are designed for everyday use. PLA products are sturdy and long-lasting under normal conditions. Avoid prolonged exposure to direct sunlight or temperatures above 60°C, as PLA can soften under high heat."
+      },
+      "returnPolicy": {
+        "question": "What is your return policy?",
+        "answer": "Products can only be returned if they arrive defective or damaged. Please contact us within 48 hours of delivery at support@multitrack.app with photos of the defect. We will arrange a replacement or full refund at no extra cost. Please note that 3D printing layer lines are a normal characteristic of the manufacturing process and are not considered a defect."
+      },
+      "howToReturn": {
+        "question": "How do I return a product?",
+        "answer": "If your product arrived defective or damaged, contact us at support@multitrack.app with your order number and photos of the defect. We will cover the return shipping and arrange a replacement or refund."
+      },
+      "refundTime": {
+        "question": "How long does a refund take?",
+        "answer": "Once we receive and inspect the defective item, refunds are processed within 10 business days. The refund will be credited to your original payment method."
+      },
+      "damagedProduct": {
+        "question": "What if I receive a damaged product?",
+        "answer": "If your product arrives damaged, please contact us within 48 hours at support@multitrack.app with photos of the damage. We will arrange a replacement or full refund at no extra cost."
+      },
+      "createAccount": {
+        "question": "Do I need an account to order?",
+        "answer": "Yes, you need to create an account or log in to place an order. Your account lets you track orders, save shipping addresses, manage your wishlist, and check out faster in the future."
+      },
+      "loginMethod": {
+        "question": "How do I log in to my account?",
+        "answer": "We use a passwordless login system. Enter your phone number or email and you will receive a one-time verification code. Enter the code to log in — no password needed."
+      },
+      "changePersonalInfo": {
+        "question": "How do I update my personal information?",
+        "answer": "Go to My Account → Settings to update your name and other personal details. You can manage your shipping addresses under My Account → Addresses."
+      }
+    },
+    "contact": {
+      "title": "Still have questions?",
+      "description": "Can't find the answer you're looking for? Contact our support team and we'll be happy to help."
+    }
+  }
+}
