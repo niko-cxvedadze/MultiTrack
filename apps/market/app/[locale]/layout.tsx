@@ -1,49 +1,52 @@
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
-import { Geist, Geist_Mono } from 'next/font/google'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { Geist, Geist_Mono } from 'next/font/google'
 import { notFound } from 'next/navigation'
+import Script from 'next/script'
 
-import { AnalyticsWrapper } from '@/components/layout/analytics-wrapper'
-import { CookieConsent, CookieConsentDialog } from '@/components/layout/cookie-consent'
-import { CrispChat } from '@/components/layout/crisp-chat'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
-import { ResponsiveToaster } from '@/components/layout/responsive-toaster'
 import { QueryProvider } from '@/components/layout/query-provider'
+import { ResponsiveToaster } from '@/components/layout/responsive-toaster'
 import { ThemeProvider } from '@/components/layout/theme-provider'
+
 import { routing } from '@/i18n/routing'
+
 import '../globals.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap'
 })
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap'
 })
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 1
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'header.pageTitle' })
 
   return {
     title: {
       default: t('home'),
-      template: `%s | MultiTrack`,
+      template: `%s | MultiTrack`
     },
-    description: 'MultiTrack',
+    description: 'MultiTrack'
   }
 }
 
@@ -72,9 +75,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           {`if(typeof __name==="undefined"){var __name=function(fn){return fn}}`}
         </Script>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -88,10 +89,6 @@ export default async function LocaleLayout({ children, params }: Props) {
                 <main className="flex-1">{children}</main>
                 <Footer />
               </div>
-              <CrispChat />
-              <AnalyticsWrapper />
-              <CookieConsent />
-              <CookieConsentDialog />
               <ResponsiveToaster />
             </NextIntlClientProvider>
           </QueryProvider>

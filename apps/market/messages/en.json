@@ -280,15 +280,6 @@
       }
     }
   },
-  "cookieConsent": {
-    "title": "Cookies",
-    "message": "We use cookies to improve your experience.",
-    "learnMore": "Learn more",
-    "accept": "Accept",
-    "decline": "Decline",
-    "dialogTitle": "Accept cookies to continue",
-    "dialogMessage": "To add items to your cart and use all features, please accept our cookie policy."
-  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Find answers to the most common questions about our products, ordering, shipping, and more.",

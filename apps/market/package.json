@@ -15,7 +15,6 @@
     "@hookform/resolvers": "^5.2.2",
     "@instantdb/admin": "^0.22.96",
     "@instantdb/react": "^0.22.96",
-    "@microsoft/clarity": "^1.0.2",
     "@next/env": "16.1.6",
     "@opennextjs/cloudflare": "^1.17.1",
     "@repo/types": "workspace:*",
