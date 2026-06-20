@@ -1,8 +1,8 @@
-# Printa Backend
+# MultiTrack Backend
 
 > See also: [Root CLAUDE.md](../../CLAUDE.md) for InstantDB patterns, shared constants, routing, and monorepo conventions.
 
-> Hono API on Cloudflare Workers with InstantDB admin SDK, Zod validation, and event-driven notifications.
+> Hono API on Cloudflare Workers with InstantDB admin SDK, Zod validation, and an event queue scaffold.
 
 ## Tech Stack
 
@@ -15,22 +15,16 @@
 | **Formatter/Linter** | Biome (semicolons, double quotes, tabs) |
 | **Async**            | `p-map` for concurrent operations       |
 
-## Use `prepareUpdate` and `prepareCreate` for InstantDB payloads
+## Architecture
 
-All store and service update/create methods must use the shared utilities from `@/common/utils/instantUpdates` to handle null/undefined values correctly. Never use inline `coerceNulls`, `mapValues`, or `omitBy(…, isUndefined)` patterns.
+The app is organized into layers, wired together in `src/deps.ts`:
 
-```tsx
-import { prepareCreate, prepareUpdate } from '@/common/utils/instantUpdates'
+- `src/routes/` — Hono route handlers, registered in `src/index.ts`
+- `src/api/` & `src/stores/` — services (business logic) and stores (InstantDB access)
+- `src/common/` — middleware, services (email/SMS/OTP/upload), models, lib, utils
+- `src/queue/` — Cloudflare Queue consumer (`handler.ts`)
 
-// Update: undefined = skip, null = clear field, value = set
-const updates = prepareUpdate(data as Record<string, unknown>, ['relationField'])
-updates.updatedAt = Date.now()
-
-// Create: drops undefined and null fields
-const attrs = prepareCreate(data as Record<string, unknown>, ['relationField'])
-```
-
-The `omitKeys` parameter excludes relation IDs (e.g., `categoryId`, `whitelistedUserIds`) that are handled separately via link/unlink.
+The current boilerplate exposes auth (`/auth`, `/admin` login), an authenticated user route (`/me`), admin user management (`/users`), and file upload (`/upload`).
 
 ## Use `p-map` instead of sequential `for...of` + `await` loops
 
@@ -51,43 +45,22 @@ for (const item of items) {
 }
 ```
 
-## Use `buildStockRestoreTxs` for stock restoration on cancellation
-
-Stock restoration logic lives in `src/common/utils/stockRestore.ts`. Both the user cancel endpoint (`orderService.cancelOrder`) and the admin status update endpoint (`admin-orders.ts`) use this shared function. Never duplicate the stock restoration logic inline.
-
-```tsx
-import { buildStockRestoreTxs } from '@/common/utils/stockRestore'
-
-const stockRestoreTxs =
-  newStatus === OrderStatus.Cancelled ? buildStockRestoreTxs(order.items ?? [], adminDb) : []
-```
-
 ## Always validate route params and request bodies with Zod
 
 Every backend route that accepts params (`:id`) or a JSON body MUST validate them with Zod schemas from `packages/types/src/validators/`. Never trust raw `c.req.param()` or `c.req.json()` — always `safeParse` before use.
 
 ```tsx
-import { orderIdParamSchema, updateOrderStatusBodySchema } from '@repo/types'
-
-// Correct: Validate params
-const paramResult = orderIdParamSchema.safeParse({ id: c.req.param('id') })
-if (!paramResult.success) {
-  return c.json({ success: false, message: 'Invalid order ID', statusCode: 400 }, 400)
-}
-
-// Correct: Validate body
-const bodyResult = updateOrderStatusBodySchema.safeParse(await c.req.json())
+// Correct: Validate body against a shared validator
+const bodyResult = SomeInputValidator.shape.body.safeParse(await c.req.json())
 if (!bodyResult.success) {
   return c.json({ success: false, message: bodyResult.error.issues[0]?.message, statusCode: 400 }, 400)
 }
 
 // Wrong: Unvalidated cast
-const orderId = c.req.param('id')
-const body = await c.req.json<{ status: string }>()
-const status = body.status as OrderStatus
+const body = await c.req.json<{ field: string }>()
 ```
 
-For ID params, use `z.string().uuid()`. For enum fields, use `z.nativeEnum(MyEnum)`.
+For ID params, use `z.string().uuid()`. For enum fields, use `z.nativeEnum(MyEnum)`. Define new schemas in `packages/types/src/validators/` — never inline.
 
 ## Validate JWT payloads with Zod — never use `as unknown as`
 
@@ -113,52 +86,37 @@ All auth endpoints (OTP send, admin login) must have rate limiting middleware. U
 - OTP endpoints: `rateLimitOtp` middleware, keyed on phone/email
 - Admin login: `rateLimitAdminLogin` middleware, keyed on IP (`cf-connecting-ip`)
 
-## Event system — `EventType` enum, `dispatchEvent`, and notifier pattern
+## Event system — `EventType` enum, `dispatchEvent`, and the queue handler
 
-All application events use the `EventType` enum from `@repo/types` (never string literals). Event payloads must be minimal — only IDs and status values. Consumers fetch full data from DB when needed.
+Async side-effects run through a Cloudflare Queue. Events use the `EventType` enum from `@repo/types` (never string literals). Payloads must be minimal — only IDs and primitive values; consumers fetch full data from the DB when needed.
 
 ### Dispatching events
 
-Use `dispatchEvent()` from `@/common/utils/dispatchEvent` to send events to the queue. It wraps `queue.send()` with try/catch so dispatch failures never break the main request flow.
+Use `dispatchEvent()` from `@/common/utils/dispatchEvent` to send events to the queue. It wraps `queue.send()` in try/catch so dispatch failures never break the main request flow.
 
 ```tsx
 import { EventType } from '@repo/types'
 
 import { dispatchEvent } from '@/common/utils/dispatchEvent'
 
-// Correct: Use enum + dispatchEvent with minimal payload
-await dispatchEvent(queue, { type: EventType.OrderCreated, orderId })
-await dispatchEvent(queue, { type: EventType.OrderStatusChanged, orderId, newStatus })
+// Correct: enum + minimal payload
+await dispatchEvent(queue, { type: EventType.Example, message })
 
-// Wrong: String literals
-await queue.send({ type: 'order.created', orderId })
-
-// Wrong: Bloated payload (fetch in consumer instead)
-await queue.send({ type: EventType.OrderCreated, orderId, contactName, items, totalPrice })
+// Wrong: string literal
+await queue.send({ type: 'example', message })
 ```
 
-### Queue handler and notifiers
+### Queue handler
 
-The queue handler (`src/queue/handler.ts`) is a **pure router** — it fans out events to notifiers via `Promise.all`. It does NOT contain business logic. For order events, it pre-fetches the order and passes it optionally to notifiers.
-
-Notifiers live in `src/queue/notifiers/` and are organized by **delivery channel** (not by event type):
-
-- `emailNotifier.ts` — sends emails via Resend
-- `smsNotifier.ts` — sends SMS via Sender.ge
-
-Each notifier receives `(event, env, order?)` and handles all event types relevant to its channel.
+The queue handler (`src/queue/handler.ts`) is a simple router that switches on `event.type`. It currently handles the placeholder `EventType.Example`. As you add domain events, extend the switch (or fan out to per-channel notifiers, e.g. email/SMS, via `Promise.all`).
 
 ### Adding new events
 
-1. Add the event to `EventType` enum in `packages/types/src/events.ts`
+1. Add the event to the `EventType` enum in `packages/types/src/events.ts`
 2. Define the event interface and add it to the `AppEvent` union
-3. Dispatch with `dispatchEvent()` using the enum
-4. Add cases in each notifier that should react to the event
+3. Dispatch it with `dispatchEvent()` using the enum
+4. Add a `case` for it in `handler.ts`
 
-### Order status labels for emails/templates
+## Email templates
 
-Use `ORDER_STATUS_NAMES_KA` and `ORDER_STATUS_NAMES_EN` from `@repo/types` for raw status labels in emails, PDFs, and other non-i18n contexts. Never hardcode status label maps in template files.
-
-### Email template naming
-
-Email template functions follow the event naming pattern: `orderCreatedHtml/Subject`, `orderStatusChangedHtml/Subject`. Template files live in `src/common/email-templates/` and are named after the event (e.g., `order-created.ts`, `order-status-changed.ts`).
+Transactional emails are plain functions in `src/common/email-templates/`, composed with the shared `layout.ts` wrapper and exported from `index.ts`. The boilerplate ships `verification-code.ts` (OTP email). Add new templates as their own files and export them from `index.ts`.

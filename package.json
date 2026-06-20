@@ -27,7 +27,7 @@
     "zod": "4.0.2"
   },
   "packageManager": "bun@1.2.4",
-  "name": "with-vite-react",
+  "name": "multitrack",
   "workspaces": [
     "apps/*",
     "packages/*"
