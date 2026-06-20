@@ -1,9 +1,9 @@
 {
   "name": "multitrack-backend",
   "version": "1.0.0",
-  "description": "printa backend",
-  "author": "Printa",
-  "repository": "printa/printa-backend",
+  "description": "multitrack backend",
+  "author": "MultiTrack",
+  "repository": "niko-cxvedadze/MultiTrack",
   "license": "MIT",
   "private": true,
   "scripts": {
