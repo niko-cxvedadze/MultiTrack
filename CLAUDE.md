@@ -7,7 +7,6 @@ with excellent visual asthetics using InstantDB as the backend.
 - [PROJECT.md](./PROJECT.md) - Project context, roadmap, architecture, and Linear issue tracking
 - [THEMING.md](./THEMING.md) - Theming guidelines, color system, and styling patterns
 - [AUTH.md](./AUTH.md) - Authentication architecture, endpoints, OTP flow, and file map
-- [apps/admin/CLAUDE.md](./apps/admin/CLAUDE.md) - Admin panel: Ant Design, React Query, Jotai
 - [apps/backend/CLAUDE.md](./apps/backend/CLAUDE.md) - Backend: Hono on Cloudflare Workers, Biome
 - [apps/market/CLAUDE.md](./apps/market/CLAUDE.md) - Market: customer-facing Next.js app (mobile-first)
 
@@ -316,12 +315,11 @@ All TypeScript interfaces and types must be defined in `packages/types`. Never d
 
 Each app has its own centralized route object. Never write route strings inline.
 
-- **Admin app** — use `adminRoutes` and `ADMIN_PATHS` from `@/routes`
 - **Market app** — use `routes` and `ROUTE_PATHS` from `@repo/types`
 
 ## Use `lodash-es` for utility operations — always
 
-Always prefer lodash functions (`omit`, `pick`, `groupBy`, `sortBy`, `first`, `isEmpty`, `keyBy`, etc.) over manual implementations. Installed in `apps/backend`, `apps/admin`, and `apps/market`.
+Always prefer lodash functions (`omit`, `pick`, `groupBy`, `sortBy`, `first`, `isEmpty`, `keyBy`, etc.) over manual implementations. Installed in `apps/backend` and `apps/market`.
 
 ## Never use `any` or `as any` — always use proper types
 
@@ -337,7 +335,7 @@ After making code changes, periodically run `tsc --noEmit` (or the project's typ
 
 ## Always respect formatters and linters — zero warnings policy
 
-- **`packages/types`**, **`apps/admin`**, **`apps/market`**: Use **Prettier** (`semi: false`, `singleQuote: true`, `tabWidth: 2`) and **ESLint**. Run `prettier --write` then `eslint --fix`.
+- **`packages/types`**, **`apps/market`**: Use **Prettier** (`semi: false`, `singleQuote: true`, `tabWidth: 2`) and **ESLint**. Run `prettier --write` then `eslint --fix`.
 - **`apps/backend`**: Uses **Biome** (semicolons, double quotes, tabs). Run `biome check --write`.
 - Pre-commit hooks via `husky` + `lint-staged` (config in `lint-staged.config.mjs`).
 

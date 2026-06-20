@@ -2,11 +2,10 @@
 
 ## Architecture
 
-| App | Runtime | Config Method |
-|-----|---------|---------------|
+| App                          | Runtime                   | Config Method                                  |
+| ---------------------------- | ------------------------- | ---------------------------------------------- |
 | **Backend** (`apps/backend`) | Cloudflare Workers (Hono) | `wrangler.jsonc` bindings + Cloudflare secrets |
-| **Market** (`apps/market`) | Next.js 15 | `.env` / `.env.local` |
-| **Admin** (`apps/admin`) | Vite + React | `.env` with `VITE_` prefix |
+| **Market** (`apps/market`)   | Next.js 15                | `.env` / `.env.local`                          |
 
 ---
 
@@ -21,11 +20,8 @@ The backend runs on **Cloudflare Workers**. Environment variables are managed vi
 cd apps/backend
 npx wrangler secret put INSTANT_APP_ID
 npx wrangler secret put INSTANT_APP_ADMIN_TOKEN
-npx wrangler secret put JWT_SECRET
 npx wrangler secret put SMS_API_KEY
 npx wrangler secret put RESEND_API_KEY
-npx wrangler secret put ADMIN_EMAIL
-npx wrangler secret put ADMIN_PASSWORD_HASH
 npx wrangler secret put CORS_ORIGIN
 npx wrangler secret put R2_PUBLIC_URL
 npx wrangler secret put R2_ACCOUNT_ID
@@ -38,12 +34,11 @@ npx wrangler secret put R2_BUCKET_NAME
 
 These are Cloudflare-managed resources, not user-set secrets:
 
-| Binding | Type | Description |
-|---------|------|-------------|
-| `R2_BUCKET` | R2 Bucket | Image storage (bucket: `printa`) |
-| `OTP_RATE_LIMITER` | Rate Limit | OTP endpoints (5 req / 60s) |
-| `ADMIN_LOGIN_RATE_LIMITER` | Rate Limit | Admin login (5 req / 60s) |
-| `EVENTS_QUEUE` | Queue (producer) | Async event processing (queue: `printa-events`) |
+| Binding            | Type             | Description                                     |
+| ------------------ | ---------------- | ----------------------------------------------- |
+| `R2_BUCKET`        | R2 Bucket        | Image storage (bucket: `printa`)                |
+| `OTP_RATE_LIMITER` | Rate Limit       | OTP endpoints (5 req / 60s)                     |
+| `EVENTS_QUEUE`     | Queue (producer) | Async event processing (queue: `printa-events`) |
 
 ### Local Development
 
@@ -52,11 +47,8 @@ For local dev with `wrangler dev`, create a `.dev.vars` file in `apps/backend/`:
 ```env
 INSTANT_APP_ID=your-app-id
 INSTANT_APP_ADMIN_TOKEN=your-admin-token
-JWT_SECRET=your-jwt-secret
 SMS_API_KEY=your-sms-api-key
 RESEND_API_KEY=your-resend-api-key
-ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD_HASH=your-bcrypt-hash
 CORS_ORIGIN=http://localhost:3000
 R2_PUBLIC_URL=https://cdn.printa.ge
 R2_ACCOUNT_ID=your-cf-account-id
@@ -100,24 +92,6 @@ NEXT_PUBLIC_INSTANT_APP_ID=your-app-id
 
 ---
 
-## Admin (`apps/admin`)
-
-Vite + React app — uses `.env` files with `VITE_` prefix.
-
-### Required Variables
-
-```env
-VITE_API_URL=http://localhost:8080   # Backend API URL
-VITE_INSTANT_APP_ID=your-app-id     # InstantDB app ID (if needed client-side)
-```
-
-### Notes
-
-- **All** client-exposed variables must use the `VITE_` prefix
-- Never put secrets (admin tokens, API keys) in Vite env files — they're bundled into the client
-
----
-
 ## Development Quick Start
 
 ```bash
@@ -136,7 +110,6 @@ cp apps/market/.env.example apps/market/.env.local
 bun run dev
 # Backend: http://localhost:8080
 # Market:  http://localhost:3000
-# Admin:   http://localhost:5173
 
 # 5. Push schema (if needed)
 bun run db:push:schema

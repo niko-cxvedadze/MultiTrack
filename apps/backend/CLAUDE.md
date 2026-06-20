@@ -24,7 +24,7 @@ The app is organized into layers, wired together in `src/deps.ts`:
 - `src/common/` — middleware, services (email/SMS/OTP/upload), models, lib, utils
 - `src/queue/` — Cloudflare Queue consumer (`handler.ts`)
 
-The current boilerplate exposes auth (`/auth`, `/admin` login), an authenticated user route (`/me`), admin user management (`/users`), and file upload (`/upload`).
+The current boilerplate exposes auth (`/auth`) and an authenticated user route (`/me`). An `UploadService` (R2 presigned URLs) is wired in `deps.ts` and ready to expose via a route when needed.
 
 ## Use `p-map` instead of sequential `for...of` + `await` loops
 
@@ -62,29 +62,11 @@ const body = await c.req.json<{ field: string }>()
 
 For ID params, use `z.string().uuid()`. For enum fields, use `z.nativeEnum(MyEnum)`. Define new schemas in `packages/types/src/validators/` — never inline.
 
-## Validate JWT payloads with Zod — never use `as unknown as`
-
-JWT payloads from `jwtVerify` must be validated with `AdminJwtPayloadSchema.safeParse()` before use.
-
-```tsx
-import { AdminJwtPayloadSchema } from '@repo/types'
-
-// Correct
-const { payload } = await jwtVerify(token, secret)
-const parsed = AdminJwtPayloadSchema.safeParse(payload)
-if (!parsed.success) return null
-return parsed.data
-
-// Wrong
-return payload as unknown as { email: string; role: string }
-```
-
 ## Rate limit all authentication endpoints
 
-All auth endpoints (OTP send, admin login) must have rate limiting middleware. Use Cloudflare Workers rate limit bindings configured in `wrangler.jsonc`. The `simple.period` only supports values of `10` or `60` seconds.
+All auth endpoints (e.g. OTP send) must have rate limiting middleware. Use Cloudflare Workers rate limit bindings configured in `wrangler.jsonc`. The `simple.period` only supports values of `10` or `60` seconds.
 
 - OTP endpoints: `rateLimitOtp` middleware, keyed on phone/email
-- Admin login: `rateLimitAdminLogin` middleware, keyed on IP (`cf-connecting-ip`)
 
 ## Event system — `EventType` enum, `dispatchEvent`, and the queue handler
 

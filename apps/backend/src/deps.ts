@@ -1,4 +1,3 @@
-import { AdminAuthService } from '@/api/admin/adminAuthService'
 import { AuthService } from '@/api/auth/authService'
 import { ProfileService } from '@/api/profile/profileService'
 import { createAdminDb } from '@/common/lib/adminDb'
@@ -20,13 +19,11 @@ export function createDeps(env: Env, existingAdminDb?: ReturnType<typeof createA
   const uploadService = new UploadService(env)
   const smsService = new SMSService(env.SMS_API_KEY)
   const otpService = new OTPService(otpStore)
-  const adminAuthService = new AdminAuthService(env)
   const authService = new AuthService(userStore, otpService, smsService, adminDb)
   const profileService = new ProfileService(adminDb)
 
   return {
     adminDb,
-    adminAuthService,
     authService,
     uploadService,
     smsService,
