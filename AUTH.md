@@ -41,7 +41,7 @@ Auth is handled through a **custom backend** — never directly via InstantDB cl
 
 ## Frontend Auth Flow
 
-All auth mutations live in `apps/market/api/client/mutations/auth.ts`. The client **never** calls `db.auth.sendMagicCode()` or `db.auth.signInWithMagicCode()` directly. Instead:
+All auth mutations live in `apps/app/api/client/mutations/auth.ts`. The client **never** calls `db.auth.sendMagicCode()` or `db.auth.signInWithMagicCode()` directly. Instead:
 
 ```
 sendPhoneCode(phone, purpose)    → POST /auth/send-code
@@ -63,11 +63,11 @@ All auth forms use `getApiErrorMessage(err, fallback)` from `@repo/types` to ext
 - **OTP store**: `apps/backend/src/stores/otpStore.ts`
 - **OTP service**: `apps/backend/src/common/services/otpService.ts`
 - **SMS service**: `apps/backend/src/common/services/smsService.ts`
-- **Frontend mutations**: `apps/market/api/client/mutations/auth.ts`
-- **Phone login form**: `apps/market/components/auth/phone-login-form.tsx`
-- **Email login form**: `apps/market/components/auth/email-login-form.tsx`
-- **Register form**: `apps/market/components/auth/register-form.tsx`
-- **Auth modal**: `apps/market/components/auth/auth-modal.tsx`
+- **Frontend mutations**: `apps/app/api/client/mutations/auth.ts`
+- **Phone login form**: `apps/app/components/auth/phone-login-form.tsx`
+- **Email login form**: `apps/app/components/auth/email-login-form.tsx`
+- **Register form**: `apps/app/components/auth/register-form.tsx`
+- **Auth modal**: `apps/app/components/auth/auth-modal.tsx`
 - **Validators**: `packages/types/src/validators/auth.ts`
 - **OtpPurpose enum**: `packages/types/src/constants/index.ts`
 - **Error helper**: `packages/types/src/utils/error.ts`

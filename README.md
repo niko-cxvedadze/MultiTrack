@@ -10,7 +10,7 @@ This Turborepo monorepo includes:
 
 ### Apps
 
-- `market`: customer-facing app — Next.js (App Router), mobile-first, shadcn/ui, next-intl
+- `app`: customer-facing app — Next.js (App Router), mobile-first, shadcn/ui, next-intl
 - `backend`: API — Hono on Cloudflare Workers (R2 storage, Queues, rate limiting)
 
 ### Packages
@@ -23,7 +23,7 @@ This Turborepo monorepo includes:
 
 - Phone & email OTP authentication (custom auth via InstantDB tokens)
 - Real-time data with InstantDB (`instant.schema.ts` / `instant.perms.ts`)
-- i18n (Georgian + English) — next-intl (market)
+- i18n (Georgian + English) — next-intl (app)
 - File uploads to Cloudflare R2 (presigned URLs, image/video handling)
 - Cloudflare Queue scaffold for async event processing
 - Dark mode + theming

@@ -8,7 +8,7 @@ with excellent visual asthetics using InstantDB as the backend.
 - [THEMING.md](./THEMING.md) - Theming guidelines, color system, and styling patterns
 - [AUTH.md](./AUTH.md) - Authentication architecture, endpoints, OTP flow, and file map
 - [apps/backend/CLAUDE.md](./apps/backend/CLAUDE.md) - Backend: Hono on Cloudflare Workers, Biome
-- [apps/market/CLAUDE.md](./apps/market/CLAUDE.md) - Market: customer-facing Next.js app (mobile-first)
+- [apps/app/CLAUDE.md](./apps/app/CLAUDE.md) - App: customer-facing Next.js app (mobile-first)
 
 # About InstantDB aka Instant
 
@@ -319,7 +319,7 @@ Each app has its own centralized route object. Never write route strings inline.
 
 ## Use `lodash-es` for utility operations — always
 
-Always prefer lodash functions (`omit`, `pick`, `groupBy`, `sortBy`, `first`, `isEmpty`, `keyBy`, etc.) over manual implementations. Installed in `apps/backend` and `apps/market`.
+Always prefer lodash functions (`omit`, `pick`, `groupBy`, `sortBy`, `first`, `isEmpty`, `keyBy`, etc.) over manual implementations. Installed in `apps/backend` and `apps/app`.
 
 ## Never use `any` or `as any` — always use proper types
 
@@ -335,7 +335,7 @@ After making code changes, periodically run `tsc --noEmit` (or the project's typ
 
 ## Always respect formatters and linters — zero warnings policy
 
-- **`packages/types`**, **`apps/market`**: Use **Prettier** (`semi: false`, `singleQuote: true`, `tabWidth: 2`) and **ESLint**. Run `prettier --write` then `eslint --fix`.
+- **`packages/types`**, **`apps/app`**: Use **Prettier** (`semi: false`, `singleQuote: true`, `tabWidth: 2`) and **ESLint**. Run `prettier --write` then `eslint --fix`.
 - **`apps/backend`**: Uses **Biome** (semicolons, double quotes, tabs). Run `biome check --write`.
 - Pre-commit hooks via `husky` + `lint-staged` (config in `lint-staged.config.mjs`).
 

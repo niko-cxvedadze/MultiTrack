@@ -1,4 +1,4 @@
-# MultiTrack Market
+# MultiTrack App
 
 > See also: [Root CLAUDE.md](../../CLAUDE.md) for InstantDB patterns, shared constants, routing, and monorepo conventions.
 
@@ -30,7 +30,7 @@ This is the mobile-first, customer-facing app. It currently ships as a clean boi
 ## Project Structure
 
 ```
-apps/market/
+apps/app/
 ├── app/
 │   └── [locale]/           # Locale-prefixed App Router pages
 │       ├── layout.tsx      # Locale layout (providers, header, footer)

@@ -5,7 +5,7 @@
 | App                          | Runtime                   | Config Method                                  |
 | ---------------------------- | ------------------------- | ---------------------------------------------- |
 | **Backend** (`apps/backend`) | Cloudflare Workers (Hono) | `wrangler.jsonc` bindings + Cloudflare secrets |
-| **Market** (`apps/market`)   | Next.js 15                | `.env` / `.env.local`                          |
+| **App** (`apps/app`)         | Next.js 15                | `.env` / `.env.local`                          |
 
 ---
 
@@ -66,7 +66,7 @@ npx wrangler deploy
 
 ---
 
-## Market (`apps/market`)
+## App (`apps/app`)
 
 Next.js app — uses standard `.env` / `.env.local` files.
 
@@ -102,8 +102,8 @@ bun install
 cp apps/backend/.dev.vars.example apps/backend/.dev.vars
 # Edit .dev.vars with your values
 
-# 3. Set up market env
-cp apps/market/.env.example apps/market/.env.local
+# 3. Set up app env
+cp apps/app/.env.example apps/app/.env.local
 # Edit .env.local with your values
 
 # 4. Run all apps

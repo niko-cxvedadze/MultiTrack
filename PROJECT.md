@@ -15,21 +15,21 @@ Domain features (projects, time entries, reports, etc.) are added on top of this
 | **Monorepo**          | Turborepo                                  |
 | **Package Manager**   | Bun                                        |
 | **Database**          | InstantDB (real-time, offline-first)       |
-| **Market (Customer)** | Next.js + React + TypeScript               |
+| **App (Customer)**    | Next.js + React + TypeScript               |
 | **Backend**           | Hono (Cloudflare Workers)                  |
 | **Storage**           | Cloudflare R2 (S3-compatible)              |
 | **Queue**             | Cloudflare Queues (async event processing) |
 | **Rate Limiting**     | Cloudflare Workers Rate Limiting           |
 | **Email**             | Resend                                     |
 | **SMS**               | sender.ge                                  |
-| **i18n**              | next-intl (market)                         |
+| **i18n**              | next-intl (app)                            |
 | **Styling**           | Tailwind CSS                               |
 
 ## Project Structure
 
 ```
 apps/
-  market/    Customer-facing Next.js app (mobile-first)
+  app/       Customer-facing Next.js app (mobile-first)
   backend/   Hono API on Cloudflare Workers
 packages/
   types/             Shared types, constants, Zod validators, utils
